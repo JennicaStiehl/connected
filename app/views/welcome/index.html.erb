@@ -1,0 +1,6 @@
+<% if current_user %>
+  <h2>Welcome, <%= current_user.name %>!</h2>
+<% else %>
+  <%= link_to "Register as a new user", new_user_path %>
+  <%= link_to "Create New Interest", new_admin_interest_path %>
+<% end %>

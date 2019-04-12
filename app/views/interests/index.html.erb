@@ -1,0 +1,8 @@
+<h1>Interests</h1>
+<% flash.each do |type, message| %>
+  <%= message %>
+  <% end %>
+<% @interests.each do |interest| %>
+<%= interest.name %>
+<%= button_to "Add Interest", carts_path(interest_id: interest) %>
+<% end %>
