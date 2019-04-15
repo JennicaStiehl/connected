@@ -1,7 +1,7 @@
 require 'rails_helper'
 RSpec.describe 'as a visitor' do
   describe 'i can shop and' do
-    it 'i see a button that adds to the cart' do
+    xit 'i see a button that adds to the cart' do
       interest = Interest.create!(name: "soccer")
       visit interests_path
       click_button "Add Interest"
@@ -11,7 +11,7 @@ RSpec.describe 'as a visitor' do
       expect(page).to have_content("You have 2 interests in your cart")
 
     end
-        it "the total number of interests in the cart increments" do
+    xit "the total number of interests in the cart increments" do
       interest = Interest.create!(name: "soccer")
 
       visit interests_path
