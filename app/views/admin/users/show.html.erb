@@ -1,0 +1,3 @@
+<%= @user.name %>
+<%= @user.role %>
+<%= link_to "Upgrade User to Mentor", admin_upgrade_user_path(@user.id), method: :patch %>

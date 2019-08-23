@@ -1,0 +1,11 @@
+<h1>User Index</h1>
+<% @users.each do |user| %>
+  Name: <%= user.name %>
+  City: <%= user.city %>
+  State: <%= user.state %>
+  Zip: <%= user.zip %>
+  Email: <%= user.email %>
+  Interests: <% user.interests.each do |interest| %>
+    <%= interest.name %>
+  <% end %>
+<% end %>

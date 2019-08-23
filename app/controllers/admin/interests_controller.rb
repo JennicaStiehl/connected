@@ -8,6 +8,7 @@ class Admin::InterestsController < ApplicationController
   def create
     interest = Interest.new(name: params[:interest][:name])
     if interest.save
+      flash[:success] = "You have created a new interest!"
       redirect_to interests_path
     else
       render :new
